@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors, Stylings, Sizes</title>
+    <style>
+        p{
+            color: white;   /*To color text*/
+            background-color: green; /*To color the background of the text*/
+            width: 200px;   /*width is fixed no matter what the screen size of the browser*/
+        }
+
+        /* ID is styled below */
+        #second{
+            color: red;
+            background-color: aqua;
+            text-align: center; /*To center the text*/
+            font-size: large; /*To fix the size of the font*/
+            width: 50%; /*width is relative or half of the screen size*/
+        }
+
+        /* Class is styled below */
+        .three{
+            color: violet;
+            background-color: yellow;
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h3>Trying Different Types of Selectors</h3>
+    <!-- Normal Tag -->
+    <p>1st Line</p>
+    <p>1st Line</p>
+    <p>1st Line</p>
+
+    <!-- With Different ID -->
+    <p id="second">2nd Line</p>
+
+    <!-- With Classes -->
+    <p class="three">3rd Line</p>
+    <p class="three">3rd Line</p>
+    <p class="three">3rd Line</p>
+</body>
+</html>
