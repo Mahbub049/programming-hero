@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        div{
+            background-color:aquamarine;
+            border: 5px indianred solid;
+        }
+        /* Padding will be added here */
+        .padding{
+            padding: 20px; /*every side 20px*/
+            padding: 20px 10px; /*TB-20px, LR-10px*/
+            padding: 20px 15px 10px; /*T-20px, LR-15px, B-10px*/
+            padding: 20px 20px 20px 20px; /*Top Right Bottom Left */
+        }
+        .box{
+            text-align: justify; /*justify the text*/
+            /* Box Model in sequence */
+            border: 7px rgb(75, 115, 15) solid;
+            margin: 20px;
+            padding: 20px;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="padding">
+        <h3>Division</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis nobis deserunt animi magni iusto praesentium perferendis cumque itaque necessitatibus quod earum beatae facilis quam quae, perspiciatis saepe! Laborum dolore nemo nobis error maxime distinctio?</p>
+    </div>
+    <div class="box">
+        <h3>Division</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptatem voluptatum ducimus maxime labore aperiam vero dolorum natus ea, exercitationem harum perspiciatis quo recusandae obcaecati magnam pariatur ipsum esse delectus non, unde officia. Minus, iste?</p>
+    </div>
+</body>
+</html>
