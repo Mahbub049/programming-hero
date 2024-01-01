@@ -32,6 +32,11 @@
         .ekla{
             color: rgb(33, 212, 51);
         }
+
+        /* Attribute Selector is used where only for text attribute of the form is styled */
+        input[type="text"]{
+            color: indianred;
+        }
     </style>
 </head>
 <body>
@@ -51,5 +56,12 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum inventore molestiae praesentium dolores cumque esse possimus accusantium, exercitationem laudantium recusandae. Consectetur quidem harum ab, assumenda voluptate, laudantium vel sed nisi qui voluptatum aliquid exercitationem blanditiis.</p>
         <button>submit</button>
     </div>
+
+    <form action="">
+        <label for="">Your Name
+            <input type="text" placeholder="Your Name Please">
+            <input type="password" name="" id="">
+        </label>
+    </form>
 </body>
 </html>
