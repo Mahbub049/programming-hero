@@ -1,0 +1,25 @@
+.head{
+    height: 300px;
+    color: white;
+
+    /* background image fix from different directory and which is in root folder */
+    background-image: url('../images/bice2020sitecover.jpg');
+
+    /* background image fix from local directory */
+    background-image: url('bengali-foods-caption.jpg');
+
+    /* Image is repeating so using no repeat */
+    background-repeat: no-repeat;
+    /* Repeat but in the x axis */
+    background-repeat: repeat-x;
+    /* Repeat but in the y axis */
+    background-repeat: repeat-y;
+
+    /* Fix the background size to whole screen */
+    background-size: cover;
+    /* fix the background size to  contain*/
+    background-size: contain;
+    /* fix the size manually */
+    background-size: 200px;
+
+}

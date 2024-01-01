@@ -1,0 +1,24 @@
+.box1{
+    display: none; /*display of the 2nd div is invisible*/
+}
+.box2{
+    visibility: hidden; /*takes space but still does invisible*/
+}
+.box{
+    border: 5px indianred solid;
+    margin: 20px; /*to watch boxshadow properly*/
+    box-shadow: 10px 10px 20px rebeccapurple;
+    /* X-axis, Y-axis, Deepness, Color */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* font changed and many fonts cuz if not work in the browser alternate will run*/
+}
+.display{
+    border: 2px violet solid;
+    display: block; /* block thus height will work and will start in new line*/
+    height: 40px;
+    width: 50%;
+}
+.inline{
+    border: 2px goldenrod solid;
+    display: inline-block; /*inline block thus height will work and will not start in new line*/
+    height: 40px;
+}
