@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mixed Selectors</title>
+    <style>
+        *{
+            /* Universal Selector where margin is added from the left to all the elements */
+            margin-left: 10px;
+        }
+        
+        .bup{
+            color: rgb(67, 103, 9);
+            background-color: greenyellow;
+        }
+        .public{
+            font-weight: bolder;
+        }
+
+        /* Same styling can be added into multiple classes */
+        .mist, .institute{
+            font-size: larger;
+        }
+
+        /* Same styling to multiple tags at once using div */
+        .everyone{
+            background-color: burlywood;
+        }
+
+        /* Particular words from a text is styled using span */
+        .ekla{
+            color: rgb(33, 212, 51);
+        }
+    </style>
 </head>
 <body>
-    <p></p>
+    <h3>University Name</h3>
+
+    <!-- Multiple Classes can be used in a single element -->
+    <p class="bup public">BUP</p>
+    <p>DU</p>
+    <p>BUET</p>
+    <p class="mist bup">MIST</p>
+    <p>JU</p>
+    <p>JNU</p>
+    <p><span class="ekla">Armed Forces</span> Medical College</p>
+
+    <div class="everyone">
+        <h3>Myself</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum inventore molestiae praesentium dolores cumque esse possimus accusantium, exercitationem laudantium recusandae. Consectetur quidem harum ab, assumenda voluptate, laudantium vel sed nisi qui voluptatum aliquid exercitationem blanditiis.</p>
+        <button>submit</button>
+    </div>
 </body>
 </html>
