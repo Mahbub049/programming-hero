@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        label{
+            display: block;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <form action="">
+            <h2>Please Fill out the form</h2>
+            <label for="">Your Name: 
+                <input type="text">
+            </label>
+            <label for="">Your Email:
+                <input type="text">
+            </label>
+            <label for="">Phone Number:
+                <input type="text" name="" id="">
+            </label>
+
+            <fieldset>
+                <legend>Please pick up your current status</legend>
+                <label for="gender">
+                    <input type="radio" name="sex" id="gender"> Male
+                </label>
+                <label for="gender1">
+                    <input type="radio" name="sex" id="gender1"> Female
+                </label>
+                <label for="gender2">
+                    <input type="radio" name="sex" id="gender2"> Other
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>pick up any services</legend>
+                <label for="service">
+                    <input type="checkbox" name="ser" id="service"> TV
+                </label>
+                <label for="service1">
+                    <input type="checkbox" name="ser" id="service1"> Radio
+                </label>
+                <label for="service2">
+                    <input type="checkbox" name="ser" id="service2"> Sofa
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Give your opinion</legend>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </fieldset>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
