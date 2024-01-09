@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class</title>
+    <style>
+        .hover:hover{
+            background-color: aqua;
+        }
+        .focus:focus{
+            color: brown;
+        }
+        .visited:visited{
+            color: chartreuse;
+        }
+        li:first-child{
+            background-color: aqua;
+        }
+        li:last-child{
+            background-color: rgb(27, 164, 164);
+        }
+        /* Even Child */
+        li:nth-child(2n){ 
+            color: chartreuse;
+        }
+        /* Odd Child */
+        li:nth-child(2n+1){
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hover Example -->
+    <h2 class="hover">
+        My name is Mahbub
+    </h2>
+
+    <!-- Focus Example -->
+    <input type="text" class="focus">
+
+    <!-- Visited Example -->
+    <a href="https://www.mist.ac.bd" class="visited">MIST</a>
+    
+    <!-- Positioned Class -->
+    <ul>
+        <li>Muhammad</li> <!-- First Child Also Odd Child -->
+        <li>Mahbub</li> <!-- Even Child -->
+        <li>Sarwar</li>
+        <li>Shafi</li> <!-- Last Child -->
+    </ul>
+</body>
+</html>
