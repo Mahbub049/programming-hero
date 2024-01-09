@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        .swim, img{
+            border: 2px dotted red;
+        }
+        img{
+            width: 40%;
+        }
+
+        /* Relative Position */
+        .swim{
+            position: relative;
+        }
+        .ring{
+            position: absolute;
+            top: 220px;
+        }
+
+        /* Sticky Position */
+        .boy{
+            position: sticky;
+            top: 20px;
+        }
+
+        .water{
+            position: fixed;
+            top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Position</li>
+        <li>Position</li>
+        <li>Position</li>
+        <li>Position</li>
+        <li>Position</li>
+    </ul>
+    <div class="swim">
+        <img class="boy" src="/swim/boy.svg" alt=""><br>
+        <img class="ring" src="/swim/ring.svg" alt=""><br>
+        <img class="water" src="/swim/water.svg" alt="">
+    </div>
+</body>
+</html>
