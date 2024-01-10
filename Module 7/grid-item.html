@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Items</title>
+    <style>
+        .container{
+            display: grid;  /* If used alone nothing will show */
+            /* grid-template-columns: 250px; This will take 250px width of each child */
+
+            /* grid-template-columns: 250px 250px; This will take 250px width of each child but in one row two child will be visible. */
+
+            /* grid-template-columns: 250px 250px 250px 250px 250px; This will take 250px width of each child but in one row five child will be visible. */
+            
+            /* grid-template-columns: repeat(2, 250px); This will take 250px width of each child but in one row two child will be visible because of the repeat.  */
+
+            /* grid-template-columns: repeat(2, 250px) 450px; This will take 250px width of the first two child and the last child in one row will be 450px, means there will be 3child. */
+
+            /* grid-template-columns: repeat(5, 1fr) 240px; This will take 1 fraction of total space available for each of the childs thus it will make it resposibe and 5 childs in a row. */
+
+            /* grid-template-columns: 250px auto 250px; This will provide the first and last child in the row with 250px width and the middle one will take remaining whole space. */
+
+            grid-template-columns: 250px 250px 250px 250px; 
+
+            /* justify-content: space-between; This will provide space between each child but in row. */
+
+            row-gap: 25px;
+            column-gap: 25px;
+            /* This will take gap in row and column with 25px */
+        }
+        .item{
+            border: 2px dotted green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+        <div class="item">item-21</div>
+        <div class="item">item-22</div>
+        <div class="item">item-23</div>
+        <div class="item">item-24</div>
+        <div class="item">item-25</div>
+        <div class="item">item-26</div>
+        <div class="item">item-27</div>
+        <div class="item">item-28</div>
+        <div class="item">item-29</div>
+        <div class="item">item-30</div>
+    </div>
+</body>
+</html>
