@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        /* Responsive using Flex Direction */
+        .container{
+            display: flex;
+            gap: 10px;
+        }
+        .box{
+            border: 2px solid red;
+            background-color: darkgreen;
+        }
+        
+        @media screen and (max-width: 576px) {
+            .container{
+                flex-direction: column;
+            }
+        }
+
+        /* Flex Wrap */
+        .container2{
+            display: flex;
+            gap: 2px;
+        }
+        .box2{
+            border: 2px solid tomato;
+            background-color: skyblue;
+            width: 100px;
+        }
+
+        @media screen and (max-width: 576px) {
+            .container2{
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>Flexbox - 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi cum, non iste nam sapiente perspiciatis laboriosam quam rem nostrum! Harum vitae enim doloremque cupiditate officiis sint soluta laudantium, mollitia, dolores, voluptatum reiciendis saepe consequuntur suscipit.</p>
+        </div>
+        <div class="box">
+            <h3>Flexbox - 2</h3>
+            <p>Possimus autem, fugit doloremque ab, aperiam, saepe commodi doloribus quia accusamus fuga quis! Ab nisi consectetur eos atque tenetur dolorum qui, ullam delectus commodi quam reiciendis, voluptate totam, necessitatibus autem nam porro. Similique, exercitationem incidunt.</p>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="box2">
+            <h2>1</h2>
+        </div>
+        <div class="box2">
+            <h2>2</h2>
+        </div>
+        <div class="box2">
+            <h2>3</h2>
+        </div>
+        <div class="box2">
+            <h2>4</h2>
+        </div>
+        <div class="box2">
+            <h2>5</h2>
+        </div>
+        <div class="box2">
+            <h2>6</h2>
+        </div>
+        <div class="box2">
+            <h2>7</h2>
+        </div>
+        <div class="box2">
+            <h2>8</h2>
+        </div>
+        <div class="box2">
+            <h2>9</h2>
+        </div>
+        <div class="box2">
+            <h2>10</h2>
+        </div>
+    </div>
+</body>
+</html>
