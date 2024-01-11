@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .header, .nav, .footer, .main, .sidebar, .Advertise{
+            background-color: bisque;
+            border: 2px solid tomato;
+            border-radius: 5px;
+        }
+        .header{
+            grid-area: header;
+        }
+        .nav{
+            grid-area: nav;
+        }
+        .footer{
+            grid-area: footer;
+        }
+        .main{
+            grid-area: main;
+        }
+        .sidebar{
+            grid-area: sidebar;
+        }
+        .Advertise{
+            grid-area: Advertise;
+        } 
+
+        .container{
+            display: grid;
+            gap: 10px;
+            grid-template-areas: 
+            "header header  header  header"
+            "nav    main    main    sidebar"
+            "nav    main    main    Advertise"
+            "footer footer  footer  footer";
+        }
+    </style>
+</head>
+<body class="container">
+    <header class="header">
+        The header
+    </header>
+    <nav class="nav">
+        <a href="">nav-1</a>
+        <a href="">nav-2</a>
+        <a href="">nav-3</a>
+    </nav>
+    <main class="main">
+        <h3>Article-1</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit praesentium dignissimos accusantium maxime eius at tempore obcaecati aut nobis facere?</p>
+        <h3>Article-2</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit praesentium dignissimos accusantium maxime eius at tempore obcaecati aut nobis facere?</p>
+    </main>
+    <div class="sidebar">
+        Sidebar
+    </div>
+    <div class="Advertise">
+        Advertise
+    </div>
+    <footer class="footer">
+        Footer
+    </footer>
+</body>
+</html>

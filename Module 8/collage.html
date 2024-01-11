@@ -15,51 +15,56 @@
         display: flex;
         gap: 5px;
         margin-bottom: 5px;
-        
-    }
-    .height-half img{
-        height: calc((100% - 5px)/2);
     }
     .row > div{
         flex: 1;
     }
-    .grid{
+    .row-contain{
+        height: calc((100% - 5px)/2);
+    }
+    .column{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
     }
+
+    @media screen and (max-width: 576px) {
+        .row{
+            height: auto;
+            flex-direction: column;
+        }
+        .column{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media screen and (max-width: 978px) and (min-width: 577px) {
+        .row{
+            height: auto;
+            flex-direction: column;
+        }
+        .column{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 </style>
 <body>
-    <section>
-        <div class="row">
-            <img src="/phresources/simple-responsive-examples/images/A.jpg" alt="">
-        </div>
-        <div class="row">
-            <div>
-                <img src="/phresources/simple-responsive-examples/images/B.jpg" alt="">
-            </div>
-            <div>
-                <img src="/phresources/simple-responsive-examples/images/C.jpg" alt="">
-            </div>
-            <div class="height-half">
-                <img src="/phresources/simple-responsive-examples/images/D.jpg" alt="">
-                <img src="/phresources/simple-responsive-examples/images/E.jpg" alt="">
-            </div>
-        </div>
-        <div class="row">
-            <div>
-                <img src="/phresources/simple-responsive-examples/images/F.jpg" alt="">
-            </div>
-            <div class="grid">
-                <img src="/phresources/simple-responsive-examples/images/G.jpg" alt="">
-                <img src="/phresources/simple-responsive-examples/images/G.jpg" alt="">
-                <img src="/phresources/simple-responsive-examples/images/G.jpg" alt="">
-                <img src="/phresources/simple-responsive-examples/images/G.jpg" alt="">
-            </div>
-            <div>
-                <img src="/phresources/simple-responsive-examples/images/H.jpg" alt="">
-            </div>
-        </div>
-    </section>
+    <div class="row">
+        <img src="/phresources/simple-responsive-examples/images/A.jpg" alt="">
+    </div>
+    <div class="row">
+        <div><img src="/phresources/simple-responsive-examples/images/B.jpg" alt=""></div>
+        <div><img src="/phresources/simple-responsive-examples/images/C.jpg" alt=""></div>
+        <div class="row-contain"><img src="/phresources/simple-responsive-examples/images/D.jpg" alt="">
+            <img src="/phresources/simple-responsive-examples/images/E.jpg" alt=""></div>
+    </div>
+    <div class="row">
+        <div><img src="/phresources/simple-responsive-examples/images/F.jpg" alt=""></div>
+        <div class="column"><img src="/phresources/simple-responsive-examples/images/G.jpg" alt="">
+            <img src="/phresources/simple-responsive-examples/images/G.jpg" alt="">
+            <img src="/phresources/simple-responsive-examples/images/G.jpg" alt="">
+            <img src="/phresources/simple-responsive-examples/images/G.jpg" alt=""></div>
+        <div><img src="/phresources/simple-responsive-examples/images/H.jpg" alt=""></div>
+    </div>
 </body>
 </html>
