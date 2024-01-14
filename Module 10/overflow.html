@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+    <style>
+        .box{
+            border: 2px solid rgb(67, 127, 224);
+            width: 400px;
+            height: 300px; 
+            /* This height is creating overflow in the texts thus overflow style is required */
+        }
+        /* Overflow Scroll */
+        #box1{
+            /* The text of the box1 is going inside the box2 thus overflow is added */
+            /* overflow: scroll;  Both x and y axis has been added because scroll has been added to overflow */
+            overflow-y: scroll; 
+            /* Only the y axis scrollbar has been added as x axis don't required */
+            /*  */
+        }
+
+        /* Overflow Hidden */
+        #box2{
+            /* The text outside the height and width can not be seen because overflow hidden has been used */
+            overflow: hidden;
+        }
+
+        #box3, #box4{
+            overflow: auto;
+            /* If any text overflows it will be assigned scroll and if it doesn't then it will not be assigned, automatically */
+        }
+
+        header{
+            border: 2px solid green;
+            width: 200px;
+            /* The text overflows into multiple lines because of the width being fixed */
+
+            /* If overflow: clip is used then it will work automatically after the overflow it wont show the text */
+
+            /* If there are texts more, a ... will be added in the end of the text if use ellipsis but you have to use nowrap in the white space and also a overflow such as scroll, hidden*/
+            white-space: nowrap;
+            /* As when width mentioned it is  taking multiple lines or wraping thus nowrap used*/
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <!-- The title here demonstrats when you hover it will show whole text -->
+    <header title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cumque excepturi inventore iure eveniet quod provident animi ad, hic eaque.">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cumque excepturi inventore iure eveniet quod provident animi ad, hic eaque.
+    </header>
+    <div class="box" id="box1">
+        <h3>My Text Box 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, rerum sed veritatis fugiat harum hic laudantium molestias? Unde debitis velit hic quis, alias aperiam. A consequuntur nulla vel beatae voluptates rerum praesentium in culpa doloribus. Repudiandae, distinctio. Ex fugit fuga id tenetur iure dolor, veritatis voluptate aut provident corporis ratione ipsum maxime consequuntur voluptates totam amet hic harum nam eveniet esse similique quaerat molestias. Possimus dolores sit, vitae perferendis eligendi quos fuga veniam provident quaerat ipsa itaque laboriosam obcaecati at dolore esse rem error deserunt, neque excepturi nulla optio, aspernatur culpa tempore iste. Fugiat, odio? Quos, fugiat alias. Ipsum omnis ab cumque quasi provident voluptates quis vero necessitatibus in aspernatur consequuntur dicta deserunt est pariatur, consequatur quod maiores neque accusamus doloribus totam placeat illo itaque ad. Voluptatum explicabo consectetur veniam, exercitationem, quisquam nemo doloremque provident debitis illum voluptatibus eaque unde beatae saepe. Quia velit a dignissimos deleniti itaque officia hic, similique ratione at deserunt rerum ex fugiat obcaecati, aliquam laudantium voluptates iste qui? Iste non perferendis sint quo culpa. Officia animi non sed dolor ullam dolorum voluptas at! Sed impedit rerum dolor reprehenderit veniam, dolorem vel a tempora sit, nulla alias sapiente consectetur maiores, dolores nisi accusamus omnis? Minima, quod!</p>
+    </div>
+    <div class="box" id="box2">
+        <h3>My Text Box 2</h3>
+        <p>Laboriosam harum odit asperiores quis, atque expedita quibusdam nesciunt doloribus iusto ea veniam repellendus at necessitatibus alias a error officiis! Consectetur nulla, rerum quisquam magni corporis quo molestias sunt officiis delectus dolorem vitae eveniet, cupiditate, culpa praesentium at inventore rem ab quos molestiae ea ratione fugit. Obcaecati ducimus numquam laborum dolores et, aliquam asperiores eos soluta magnam fugiat impedit similique in reiciendis minus autem ab atque quia libero illum. A saepe, voluptas laboriosam numquam beatae eum. Aspernatur error delectus quaerat quisquam natus laudantium magni repellendus nesciunt? Doloremque, commodi? Itaque numquam id minus facilis maxime eligendi quidem vitae quibusdam deleniti libero! Ullam obcaecati officia vero asperiores? Mollitia fugiat, eaque a nesciunt unde nulla est minus atque optio dolorum, commodi esse repellat assumenda alias cumque accusamus, consequuntur voluptate. Optio vitae libero dolorem consectetur doloremque laborum ipsam, ea incidunt modi nam nisi enim! Libero expedita dolorum porro odio eligendi quae, consectetur veniam quibusdam quaerat distinctio mollitia ipsa, perferendis dolor enim beatae soluta at asperiores. Expedita ex, quod consectetur, ullam voluptas, reprehenderit accusantium rerum odio atque dolores quaerat! Ullam autem, nam voluptatem consequuntur magnam quam, non adipisci incidunt iste voluptatum ea laborum facere fugiat nobis. Eveniet, dignissimos minima voluptates cumque unde tenetur laboriosam eaque?</p>
+    </div>
+    <div class="box" id="box3">
+        <h3>My Text Box 3</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nisi libero rem blanditiis qui molestiae necessitatibus suscipit incidunt, voluptatem repudiandae.</p>
+    </div>
+    <div class="box" id="box4">
+        <h3>My Text Box 4</h3>
+        <p>Laboriosam harum odit asperiores quis, atque expedita quibusdam nesciunt doloribus iusto ea veniam repellendus at necessitatibus alias a error officiis! Consectetur nulla, rerum quisquam magni corporis quo molestias sunt officiis delectus dolorem vitae eveniet, cupiditate, culpa praesentium at inventore rem ab quos molestiae ea ratione fugit. Obcaecati ducimus numquam laborum dolores et, aliquam asperiores eos soluta magnam fugiat impedit similique in reiciendis minus autem ab atque quia libero illum. A saepe, voluptas laboriosam numquam beatae eum. Aspernatur error delectus quaerat quisquam natus laudantium magni repellendus nesciunt? Doloremque, commodi? Itaque numquam id minus facilis maxime eligendi quidem vitae quibusdam deleniti libero! Ullam obcaecati officia vero asperiores? Mollitia fugiat, eaque a nesciunt unde nulla est minus atque optio dolorum, commodi esse repellat assumenda alias cumque accusamus, consequuntur voluptate. Optio vitae libero dolorem consectetur doloremque laborum ipsam, ea incidunt modi nam nisi enim! Libero expedita dolorum porro odio eligendi quae, consectetur veniam quibusdam quaerat distinctio mollitia ipsa, perferendis dolor enim beatae soluta at asperiores. Expedita ex, quod consectetur, ullam voluptas, reprehenderit accusantium rerum odio atque dolores quaerat! Ullam autem, nam voluptatem consequuntur magnam quam, non adipisci incidunt iste voluptatum ea laborum facere fugiat nobis. Eveniet, dignissimos minima voluptates cumque unde tenetur laboriosam eaque?</p>
+    </div>
+</body>
+</html>
