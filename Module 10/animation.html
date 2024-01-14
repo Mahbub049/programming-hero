@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        /* Keyframe Set */
+        /* move is a indentifier or name of the keyframe means that how it will start and how it will end */
+        @keyframes move { 
+            from{
+                /* The ball will start from left side */
+                left: 0;
+            }
+            to{
+                /* The ball will end at the right side because of the width set to 650px */
+                left: 650px;
+            }
+        }
+
+        @keyframes bounce {
+            /* Instead of from and to the 0% 25% etc can be also used */
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 350px;
+                left: 216.67px;
+            }
+            50%{
+                top: 0px;
+                left: 433.34px;
+            }
+            100%{
+                top: 350px;
+                left: 650px;
+            }
+            
+        }
+
+        /* A box created with borders */
+        .stage{
+            width: 800px;
+            height: 500px;
+            border: 2px solid green;
+        }
+
+        .stage1{
+            width: 800px;
+            height: 500px;
+            border: 2px solid green;
+        }
+        /* Ball with animation */
+        .ball1{
+            background-color: rgba(255, 0, 0, 0.363);
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            position: relative;
+            
+            /* animation: move 2s ease-in-out 1s infinite alternate; */
+
+            animation: bounce 2s ease-in-out 1s infinite alternate;
+        }
+
+            
+
+        /* Ball with animation */
+        .ball{
+            background-color: rgba(255, 0, 0, 0.363);
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            position: relative;
+            
+            animation: move 2s ease-in-out 1s infinite alternate;
+
+            /* animation: bounce 2s ease-in-out 1s infinite alternate; */
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; 
+
+            * name --> this is the keyframe name you created above, here move;
+            * duration --> how much time it may take to complete its keyframe. 2s has been given.
+            * timing-function --> How the animation will work like ease-out, ease-in and ease-in-out. where ease-out means speed will decrease with time.
+            * delay --> how much time it may take to start  its keyframe. 1s has been given.
+            * iteration-count ---> how many time the animation will continue, infinite is given means it wont stop.
+            * direction --> the direction on which way the animation may take place can be given. alternate is given.
+            fill-mode is not studied.
+
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="stage1">
+        <div class="ball1"></div>
+    </div>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
