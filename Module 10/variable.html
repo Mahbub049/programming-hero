@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+        /* CSS Styles are applying to the root element */
+        :root{
+            /* --primary-color: rgb(46, 173, 212); */
+            --primary-color: tomato;
+            --secondary-color: rgb(51, 203, 155);
+            --font-size: 20px;
+
+            /* variable can be created starting with --name here primary-color is the name of the variable and if we want to change the color of the whole file just change in the primary-color */
+        }
+        h1{
+            color: var(--primary-color);
+            /* To mention the variable, start with var() and inside the bracket mention the name of the variable and it will work */
+        }
+        h5{
+            background-color: var(--primary-color);
+        }   
+        .box{
+            border: 2px solid var(--secondary-color);
+        } 
+        h3{
+            color: var(--primary-color);
+        }
+        p{
+            background-color: var(--primary-color);
+            font-size: var(--font-size);
+        }
+
+        /* Calculation Function */
+        .inside-box{
+            display: flex;
+        }
+        .left-box{
+            background-color: aqua;
+            width: 400px;
+            height: 400px;
+        }
+        .right-box{
+            background-color: blueviolet;
+            width: calc(100% - 400px);
+            /* This will calculate the space available by deducting 400px from the whole 100% space */
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Name is Mahbub</h1>
+    <h5>I Live in Bangladesh</h5>
+    <div class="box">
+        <h3>I love to eat street foods</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sint ex sunt molestiae ipsa, nisi laboriosam at corporis quod enim assumenda. Porro necessitatibus ipsum, fuga dolore assumenda quidem animi minima voluptates corporis voluptatum aperiam quod, sunt, officia a rerum delectus.</p>
+    </div>
+
+    <div class="inside-box">
+        <div class="left-box"></div>
+        <div class="right-box"></div>
+    </div>
+</body>
+</html>
