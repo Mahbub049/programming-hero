@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        /* Initial State */
+        .box{
+            border:2px solid rgb(214, 79, 79);
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+        /* To work with the transition properly hover is used to change */
+        #box1:hover{
+            width: 800px;
+        }
+        #box2:hover{
+            background-color: rgb(59, 227, 208);
+        }
+        #box3:hover{
+            height: 600px;
+        }
+        #box4:hover{
+            transform: scale(0.75) rotate(45deg);
+        }
+        /* Transition when someone hover over box1 with only two value*/
+        #box1{
+            transition: width 5s;
+            /* Width will be changed taking 5s time */
+        }
+        #box2{
+            transition: background-color 5s linear 2s;
+            /* bg color will be chanegd in 5s after 2s delay and using linear approach */
+        }
+        #box3{
+            transition: height 5s ease-in-out;
+            /* Using three property, no delay */
+        }
+        #box4{
+            transition: transform 3s linear;
+            /* Working on the transform property */
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">
+        <p>inner 1</p>
+    </div>
+    <div class="box" id="box2">
+        <p>inner 2</p>
+    </div>
+    <div class="box" id="box3">
+        <p>inner 3</p>
+    </div>
+    <div class="box" id="box4">
+        <p>inner 4</p>
+    </div>
+</body>
+</html>
