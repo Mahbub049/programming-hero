@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .outer{
+            background-color: blue;
+            border: 2px solid red;
+            width: 300px;
+            height: 200px;
+        }
+        .inner{
+            background-color: chartreuse;
+            border: 2px solid rgb(65, 167, 226);
+            width: 300px;
+            height: 200px;
+        }
+
+        #inner1{
+            transform: scale(0.5); 
+            /* The size will be half times the original one */
+            transform: scale(1.5);
+            /* the size ill be 1.5 times then the original one */
+        }
+        #inner2{
+            transform: scale(0.5, 0.75);
+            /* In X axis it will be scaled half and in Y axis it will be scaled 0.75 */
+        }
+        #inner3{
+            transform: rotate(45deg);
+            /* The inner box will rotate 45 deg */
+            transform: rotate(-45deg);
+            /* The inner box will now rotate 45 degree in opposite. */
+        }
+        #inner4{
+            transform: translate(30px);
+            /* This will move 30 px to left */
+            transform: translate(-30px);
+            /* This will move 30 px to right */
+            transform: translateX(40px);
+            /* This will move 40px to left same in Y and Z axis can be applied*/
+            transform: translate(30px, 50px);
+            /* This will move 30px to left and 50 px to down */
+        }
+        #inner5{
+            transform: scale(0.5, 0.75) rotate(60deg) translate(60px);
+            /* All styles can be applied at a time */
+        }
+        #inner6:hover{
+            transform: scale(0.75) rotate(90deg);
+            /* If you point mouse or hover it will scaled and rotated */
+        }
+    </style>
+</head>
+<body>
+    <!-- Single Scale Property -->
+    <div class="outer">
+        <div class="inner" id="inner1">Inner 1</div>
+    </div>
+    <div class="outer">
+        <div class="inner" id="inner2">Inner 2</div>
+    </div>
+    <div class="outer">
+        <div class="inner" id="inner3">Inner 3</div>
+    </div>
+    <div class="outer">
+        <div class="inner" id="inner4">Inner 3</div>
+    </div>
+    <div class="outer">
+        <div class="inner" id="inner5">Inner 3</div>
+    </div>
+    <div class="outer">
+        <div class="inner" id="inner6">Inner 3</div>
+    </div>
+</body>
+</html>
