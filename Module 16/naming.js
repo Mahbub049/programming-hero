@@ -30,3 +30,4 @@ var WhatIsYourName = "Mahbub"; //Pascal Case
 var What_Is_Your_Name = "Mahbub"; //Snake Case
 var whatIsYourName = "Mahbub"; //Camel Case
 //In the camel case first letter is lowercase and in the pascel first letter is uppercase
+
