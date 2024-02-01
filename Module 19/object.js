@@ -106,4 +106,4 @@ const thirdObj = Object.create(
     {
     }
 )
-console.log(thirdObj)
+console.log(thirdObj);
