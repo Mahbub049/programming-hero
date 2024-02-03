@@ -1,0 +1,24 @@
+What is function in JS?
+ - А block of code
+ - А set of statements (subprogram/ block of code) that performs a task when it is called.
+ - Maintains a relationship with input and output.
+
+function --> keyword
+sum --> function name
+(a, b) --> parameters list
+{
+} --> function body
+return --> this returns value or something
+
+result = sum(4,5)
+
+sum --> function call
+(4,5) --> arguments list
+
+
+Function parameter, function return
+- Has return & Has parameter
+- No return & Has parameter
+- Has return & No parameter
+- No return & No parameter
+
