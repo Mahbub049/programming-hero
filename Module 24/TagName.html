@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TagName</title>
+</head>
+<body>
+    <h1>Some Fruits Names</h1>
+    <ul>
+        <li>Banana</li>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Strawberry</li>
+        <li>Mango</li>
+    </ul>
+    <script>
+        const fruitsName = document.getElementsByTagName('li'); //Stored the list items inside the fruitsName as a collection. Here document means the whole HTML file.
+        for(const item of fruitsName){  //taking all the items from the unordered list
+            console.log(item.innerText); //to retrieve the inner text of the html code
+        }
+    </script>
+</body>
+</html>

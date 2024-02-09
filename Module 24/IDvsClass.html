@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDvsClass</title>
+</head>
+<body>
+    <h2 id="drink">My Favorite Drinks</h2>
+    <ul>
+        <li>Pepsi</li>
+        <li>Coke</li>
+        <li>Mountain Deo</li>
+        <li>Speed</li>
+        <li>Power</li>
+    </ul>
+
+    <h2>My Favorite Places</h2>
+    <ul>
+        <li class="places">Bandarban</li>
+        <li class="places">Sylhet</li>
+        <li class="places">Coxs Bazar</li>
+        <li class="places">Kuakata</li>
+        <li>Saint Martin</li>
+    </ul>
+
+    <script>
+        const drinks = document.getElementById('drink');
+        drinks.innerText = "Popular Drink Brands";
+
+        const places = document.getElementsByClassName('places');
+        for(const place of places){
+            console.log(place.innerText);
+        };
+    </script>
+</body>
+</html>
