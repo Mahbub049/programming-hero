@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+</head>
+<body>
+    <h1>Different Buttons</h1>
+    <!-- 1st way using inside the tag -->
+    <button onclick="document.body.style.backgroundColor='#E57373'">Click Red</button>
+
+    <!-- Calling function using onclick (For this () is must) -->
+    <button onclick="clickBlue()">Click Blue</button>
+
+    <!-- Using ID and calling function inside script but separately -->
+    <button id="green-color">Click Green</button>
+    <button id="purple-color">Click Purple</button>
+
+    <script>
+        // Calling function using onclick
+        function clickBlue(){
+            document.body.style.backgroundColor = "#64B5F6";
+        }
+
+        // Using ID and calling function inside script but separately
+        const green = document.getElementById('green-color');
+        green.onclick = clickGreen;   //You can not use () here, it wont work
+
+        function clickGreen(){
+            document.body.style.backgroundColor = "#4DB6AC";
+        }
+
+        // Using ID and calling function inside script but together
+        const purple = document.getElementById('purple-color');
+        purple.onclick = function(){
+            document.body.style.backgroundColor = '#9575CD';
+        }
+    </script>
+</body>
+</html>

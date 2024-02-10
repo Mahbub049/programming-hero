@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Changing</title>
+</head>
+<body>
+    <div>
+        <h1>Onclick</h1>
+        <h2 id="change">This will be changed</h2>
+        <button id="btn-change" onclick="changeText()">Click Me</button>
+    </div>
+    <div>
+        <h1>AddEventListener</h1>
+        <p id="para-change">Text will change</p>
+        <input type="text" id="inputText">
+        <button id="btn-changed">Click Me</button>
+    </div>
+
+    <script>
+        //Text inside the h2 will change
+        function changeText(){
+            //onclicking changeText the h2 will be picked
+            const change = document.getElementById('change');
+            //Then new text will be set
+            change.innerText = "Text Changed";
+        }
+
+        // Created a way to get the value from input box and show in the paragraph tag
+        document.getElementById('btn-changed').addEventListener('click', function(){
+            //Text collected from the input tag
+            const retrieveText = document.getElementById('inputText');
+            // the value inside the input is picked
+            const value = retrieveText.value;
+
+            //paragraph selected where it will be shown
+            const paragraph = document.getElementById('para-change');
+            //the retrieved text is placed inside the paragraph
+            paragraph.innerText = value;
+            //After showing in the paragraph this input cell becomes empty
+            retrieveText.value = "";
+        })
+    </script>
+</body>
+</html>
