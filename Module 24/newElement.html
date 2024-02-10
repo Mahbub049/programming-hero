@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+    <style>
+        section{
+            background-color: aquamarine;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 2px solid tomato;
+        }
+    </style>
+</head>
+<body >
+<main id="addingItems">
+    <section>
+        <h2 id="drink">My Favorite Drinks</h2>
+        <ul>
+            <li>Pepsi</li>
+            <li>Coke</li>
+            <li>Mountain Deo</li>
+            <li>Speed</li>
+            <li>Power</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>My Favorite Places</h2>
+        <ul class="places-container">
+            <li class="places">Bandarban</li>
+            <li class="places">Sylhet</li>
+            <li class="places">Coxs Bazar</li>
+            <li class="places">Kuakata</li>
+            <li>Saint Martin</li>
+        </ul>
+    </section>
+
+    <section id="third">
+        <h2>My Favorite Places</h2>
+        <ul id="places-container">
+            <li class="places">Bandarban</li>
+            <li class="places">Sylhet</li>
+            <li class="places">Coxs Bazar</li>
+            <li class="places">Kuakata</li>
+            <li>Saint Martin</li>
+        </ul>
+
+
+    </section>
+</main>
+
+    <script>
+        //Two way we can add element
+        //innerText Way
+        const newSection = document.getElementById('addingItems');
+        console.log(newSection);
+        const section = document.createElement('section')
+        const h1 = document.createElement('h1');
+        h1.innerText = "My Favorite Dresses";
+
+        section.appendChild(h1);
+        // newSection.appendChild(section);
+
+        const ul = document.createElement('ul');
+        section.append('ul');
+
+        const list = document.createElement('li');
+        list.innerText = "Shirt";
+        ul.append(list);
+        section.append(ul);
+        newSection.append(section);
+
+        //Using innerHTML
+        // const newList = document.createElement('section');
+        section.innerHTML = `
+        <ul>
+            <li>Mahbub</li>
+            <li>Sarwar</li>
+            <li>Shafi</li>
+        </ul>
+        `
+        newSection.appendChild(section);
+
+    </script>
+</body>
+</html>

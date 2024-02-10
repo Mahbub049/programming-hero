@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <h2 id="drink" class="mahbub" width="100%">My Favorite Drinks</h2>
+    
+    <ul>
+        <li>Pepsi</li>
+        <li>Coke</li>
+        <li>Mountain Deo</li>
+        <li>Speed</li>
+        <li>Power</li>
+    </ul>
+
+    <h2>My Favorite Places</h2>
+    <ul class="places-container">
+        <li class="places chittagong bangladesh">Bandarban</li>
+        <li class="places">Sylhet</li>
+        <li class="places">Coxs Bazar</li>
+        <li class="places">Kuakata</li>
+        <li>Saint Martin</li>
+    </ul>
+
+    <script>
+        //We can style using js
+        //Changing Background Color
+        document.getElementById('drink').style.backgroundColor = 'Red'; //In JS property name should be in camel case, no hyphen
+
+        //Changing color
+        const items = document.getElementsByClassName('places-container');
+        for(const item of items){
+            item.style.color = 'red';
+        }
+
+        //Center Align text
+        document.getElementById('drink').style.textAlign = 'center';
+
+        //Get Attribute
+        document.getElementById('drink').getAttribute('width');
+
+        //classList
+        //the first element with the clasname places has been picked using 0 index and all the classes inside the tag has been retrieved using the classList
+        document.getElementsByClassName('places')[0].classList;
+
+        //We can add another class inside that indexed element using add
+        document.getElementsByClassName('places')[0].classList.add('tourist-place');
+
+        //We can remover a class from that indexed element using remove
+        document.getElementsByClassName('places')[0].classList.remove('chittagong');
+
+        //Set Attribute
+        for(const item of items){
+            item.setAttribute('title', 'This is a tourist place');
+        }
+
+        //innerHTML
+        document.getElementById('drink').innerHTML = '<h1>These are prohibited for health</h1>';
+
+        //innerText
+        document.getElementById('drink').innerText = 'They are actually prohibited';
+    </script>
+</body>
+</html>

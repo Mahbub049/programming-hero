@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+</head>
+<body>
+    <section>
+        <h2 id="drink">My Favorite Drinks</h2>
+        <ul>
+            <li>Pepsi</li>
+            <li>Coke</li>
+            <li>Mountain Deo</li>
+            <li>Speed</li>
+            <li>Power</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>My Favorite Places</h2>
+        <ul class="places-container">
+            <li class="places">Bandarban</li>
+            <li class="places">Sylhet</li>
+            <li class="places">Coxs Bazar</li>
+            <li class="places">Kuakata</li>
+            <li>Saint Martin</li>
+        </ul>
+    </section>
+
+    <section id="third">
+        <h2>My Favorite Places</h2>
+        <ul id="places-container">
+            <li class="places">Bandarban</li>
+            <li class="places">Sylhet</li>
+            <li class="places">Coxs Bazar</li>
+            <li class="places">Kuakata</li>
+            <li>Saint Martin</li>
+        </ul>
+    </section>
+
+    <script>
+        const child = document.getElementById('third');
+        console.log(child.childNodes);  //NodeList(5) [text, h2, text, ul#places-container, text]
+        console.log(child.firstChild);  //#text
+        console.log(child.lastChild);   //#text
+        console.log(child.firstChild.nextSibling);  //h2
+        console.log(child.firstChild.nextSibling.previousSibling);  //#text
+
+        //Adding items dynamically
+        const addItems = document.getElementById('places-container');
+        const listItem = document.createElement('li');
+        listItem.innerText = "Khagrachari";
+        addItems.append(listItem);
+
+        const sikim = document.createElement('li');
+        sikim.innerText = "Sikim";
+        addItems.appendChild(sikim);
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+</head>
+<body>
+    <section>
+        <h2 id="drink">My Favorite Drinks</h2>
+        <ul>
+            <li>Pepsi</li>
+            <li>Coke</li>
+            <li>Mountain Deo</li>
+            <li>Speed</li>
+            <li>Power</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>My Favorite Places</h2>
+        <ul class="places-container">
+            <li class="places">Bandarban</li>
+            <li class="places">Sylhet</li>
+            <li class="places">Coxs Bazar</li>
+            <li class="places">Kuakata</li>
+            <li>Saint Martin</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>My Favorite Places</h2>
+        <ul id="places-container">
+            <li class="places">Bandarban</li>
+            <li class="places">Sylhet</li>
+            <li class="places">Coxs Bazar</li>
+            <li class="places">Kuakata</li>
+            <li>Saint Martin</li>
+        </ul>
+    </section>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        for(const section of sections){
+            section.style.backgroundColor = 'tomato';
+            section.style.padding = '10px';
+            section.style.margin = '10px';
+            section.style.borderRadius = '20px'
+        }
+
+        const classes = document.getElementById('places-container');
+        classes.classList.add('Mirza', 'Mahbub');
+        console.log(classes.classList);
+        classes.classList.remove('Mirza');
+        console.log(classes.classList);
+    </script>
+</body>
+</html>
