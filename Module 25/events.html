@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different Events</title>
+</head>
+<body>
+    <div>
+        <h1>My Name is</h1>
+        <input id="inputs" type="text">
+        <button>Submit</button>
+        
+        <script>
+            //Onfocus: When you will click the input this will execute
+            document.getElementById('inputs').addEventListener('focus', function(){
+                console.log('Focused');
+            })
+
+            //Onblur: After selecting the input field when you will click the outside of the input field it will work
+            document.getElementById('inputs').addEventListener('blur', function(){
+                console.log('Blur');
+            })
+
+            //OnMouseOver: If you take the mouse over the element it will work
+            document.getElementById('inputs').addEventListener('mouseover', function(){
+                console.log('mouseover');
+            })
+
+            //OnMouseMove: If you moved the mouse this will work
+            document.getElementById('inputs').addEventListener('mousemove', function(){
+                console.log('mousemoved');
+            })
+
+            //KeyDown: When you will type this will work but if you type ab it will show a as it means until you press new letter, the previous letter is still down
+            document.getElementById('inputs').addEventListener('keydown', function(event){
+                const typed = event.target.value;
+                console.log(typed);
+            })
+
+            //KeyPress: When you will type this will work but if you type ab it will show a as it means until you press new letter, the previous letter is still pressed
+            document.getElementById('inputs').addEventListener('keypress', function(event){
+                const typed = event.target.value;
+                console.log(typed);
+            })
+
+            //KeyPress: When you will type this will work but if you type ab it will show ab as it means after typing new letter you moved your finger from the letter
+            document.getElementById('inputs').addEventListener('keyup', function(event){
+                const typed = event.target.value;
+                console.log(typed);
+            })
+        </script>
+    </div>
+</body>
+</html>
