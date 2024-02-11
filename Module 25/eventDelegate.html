@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<body>
+    <section>
+        <h1>Event Delegation</h1>
+        <ul id="list-container">
+            <li class="list-item">Mango</li>
+            <li class="list-item">Apple</li>
+            <li class="list-item">Pineapple</li>
+            <li class="list-item">Guava</li>
+            <li class="list-item">Banana</li>
+        </ul>
+        <button id="add-item">Add Item</button>
+    </section>
+
+    <script>
+        //To work properly you have to work on parentNode, childnode may not remove the items
+        document.getElementById('list-container').addEventListener('click', function(event){
+            console.log(event.target.parentNode.removeChild(event.target)); //This is taking the list item and goes to parent and then removes that selected child, event.target provides the selected element
+        })
+        document.getElementById('add-item').addEventListener('click', function(event){
+            const item = document.createElement('li');
+            item.innerText = "New Item";
+            // console.log(item);
+            document.getElementById('list-container').append(item);
+        })
+
+        //To add event to className use className and then for of
+    </script>
+</body>
+</html>

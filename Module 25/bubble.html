@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation</title>
+</head>
+<body id="body">
+    <section id="list-section">
+        <h1>My Favorite Foods</h1>
+        <ul id="list-items">
+            <li id="item-1">Burgur</li>
+            <li id="item-2">Pizza</li>
+            <li id="item-3">Rice Bowl</li>
+            <li id="item-4">Momo</li>
+            <li id="item-5">Chips</li>
+        </ul>
+    </section>
+
+    <script>
+        //EventPropagation: Elements dive deep of the element and it propagates backwards to check for the events in the bubble
+        //Here first event will occur on the li then ul then section and then body. this is how it propagates in backwards
+
+        //item-2
+        //If there are multiple eventlistener on one element and wanted to stop the propagation to immediate or siblings. Use stopImmediatePropagation
+        document.getElementById('item-2').addEventListener('click', function(event){
+            console.log('item 2 1st clicked');
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('item-2').addEventListener('click', function(){
+            console.log('item 2 2nd clicked');
+        })
+        document.getElementById('item-2').addEventListener('click', function(){
+            console.log('item 2 3rd clicked');
+        })
+        document.getElementById('item-2').addEventListener('click', function(){
+            console.log('item 2 4th clicked');
+        })
+
+        //ul
+        //To stop the propagation to the parent element use stoppropagation with event parameter. This wont go to section and body
+        document.getElementById('list-items').addEventListener('click', function(event){
+            event.stopPropagation();
+            console.log('ul clicked');
+        })
+
+        //section
+        document.getElementById('list-section').addEventListener('click', function(){
+            console.log('section clicked');
+        })
+
+        //body
+        document.getElementById('body').addEventListener('click', function(){
+            console.log('body clicked');
+        })
+
+
+    </script>
+</body>
+</html>
