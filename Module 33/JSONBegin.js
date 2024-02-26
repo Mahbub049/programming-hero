@@ -11,6 +11,9 @@ const student = {
 }
 console.log(student);
 
+//In JSON String the object can be showed as {"name":'mahbub', "roll":49}
+//In JS the object can be showed as {name:'mahbub', roll:49}
+
 //Converting the JS object to JSON String
 const convJSON = JSON.stringify(student);
 console.log(convJSON);
