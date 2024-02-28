@@ -1,0 +1,92 @@
+1. JS is highly abstracted programming language
+
+*** What is High Abstraction?
+An abstraction is a way of
+--- Hiding the implementation details
+--- showing only the functionality to the users
+
+*** Example
+User does not know what is happening inside the ATM
+     1. Hide details
+ 
+ Не is simply getting the by money pushing buttons
+    2. Show functionality
+
+
+*** High Abstraction in JavaScript
+1. We don't have to handle resource management and memory allocation
+2. We don't have to handle garbage collection
+3. Reduces details so that developers can focus on logic better
+4. Improves understandability as well as maintainability of the code
+
+JavaScript collects garbage automatically
+
+***Garbage Collection
+1. JS automatically collects unused data
+2. free the memory with the help of an algorithm called 'Mark-and-sweep'
+3. The garbage collector goes through the roots, marking (remembering) them on its way.
+4. It then moves on the references and marks them as well
+5. The cycle continues until the garbage collector visits all the roots and references.
+6. The garbage collects removes all the objects except the marked ones.
+
+
+JavaScript is a JIT compiled language.
+1. Interpreted language
+2. Compiled language
+
+***JIT (Just In Time)
+1. JS is not a purely Interpreted language.
+2. Modern JS is JIT compiled.
+3. JIT compiler converts the entire code into machine code and execute them immediately.
+
+JIT- Interpretation
+Compiler - Machine Code
+
+In JIT,
+JS code is parsed and became AST tree and JIT then compiled the code and execute and optimize
+
+JS is multi-paradigm programming language
+
+***Multi-paradigm
+paradigm: code structure that will determine the style or a way of programming.
+
+1. Procedural Programming: 
+--- involves writing down instructions
+--- tells the computer what it should do step by step
+
+2. OOP:
+--- modeling a system as a collection of objects
+--- objects contain both functions and data
+
+3. Functional:
+--- an approach to software development that uses pure functions
+--- to create maintainable software
+
+
+JS is proto-typed based programming language
+
+1. In Js, everything (functions, arrays, objects) is object except the primtive data
+2. a prototypical object is an object used as a template from which to get the initial properties for a new object.
+3. prototype is a blue print
+
+array ---> methods are in the parent accesssed using .prototype and inherits in the code
+
+
+JS is dynamically typed
+
+*** Dynamically-typed
+1. When you declare a variable, you do not need to specify what type this variable is.
+2. JavaScript engine infers what type this variable is based on the value assigned to at run time.
+                  let temp = 'name';
+                   temp = true;
+3. As JavaScript determines the type at runtime we can re-declare the type
+
+
+
+JS is
+--- Garbage collection
+--- JIT Compiled
+--- Multi-paradigm
+--- prototype based
+--- Dynamically typed
+--- High abstraction
