@@ -1,0 +1,11 @@
+V8 is Google’s open source high-performance JavaScript and WebAssembly engine, written in C++. It is used in Chrome and in Node.js, among others.
+
+JS internal mechanism
+JS Source Code --> Parser (Line by Line read) --> Abstract Syntax Tree (Structure the code as per own requirement) --> 
+1. Interpreter Ignition --> ByteCode
+2. Interpreter Ignition --> Compiler TurboFan --> Optimized Machine Code ---> ByteCode
+
+JS Source Code --> Parser --> Abstract Syntax Tree --> Generate Byte Code --> Optimize and Compile --> Then send to different processors to execute
+
+V8 mechanism
+.js file --> parse --> AST --> Byte Code --> Machine Code --> Execute 
