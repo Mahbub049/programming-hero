@@ -1,0 +1,28 @@
+*** Promise
+    The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value. A Promise is in one of these states:
+        1. Pending:
+              initial state, neither
+              fulfilled nor rejected.
+        2. Resolve:
+              the operation was
+              completed successfully.
+        3. Reject
+              the operation failed.
+
+*** Promise Structure:
+
+pending(new Promise) --->
+1. resolved -> fulfilled (.then()) ---> async code
+1. rejected -> rejected (.catch()) ---> error handling
+
+*** Fetch API
+    1. The fetch() method starts the process of fetching a resource from a server
+    2. The fetch0 method returns a Promise that resolves to a Response object.
+    3. A fetch0 method only rejects when a network error is encountered.
+
+*** Async/Await
+    ---> "async/await" is a special syntax to work with promises in a more comfortable way
+    ---> It's surprisingly easy to understand and use.
+    ---> The await keyword can only be used inside an asyno function.
+    ---> The await keyword makes the function pause the execution and
+    ---> wait for a resolved promise before it continues
