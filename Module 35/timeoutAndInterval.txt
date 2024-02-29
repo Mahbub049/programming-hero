@@ -1,0 +1,10 @@
+setTimeout()
+A time event function used to call another function after certain time period but executes the function only once.
+
+For clearing the timeout function, clearTimeout() is used.
+
+
+setInterval()
+Same as setTimeout() with a slice difference that the execution of the function occurs continuousl according to the specified time interval. Here, the time interval works like a gap between the executions.
+
+For clearing the timeout function, clearlnterval() is used.
