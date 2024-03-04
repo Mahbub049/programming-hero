@@ -14,6 +14,9 @@ localStorage.setItem('roll', 49);
 localStorage.setItem('foods', ['burger', 'pizza', 'chicken'])
 localStorage.setItem('university', {name: 'BUP', established: 2008})
 
+// We can get the length of the items in the localstorage using length
+console.log(localStorage.length);
+
 // Remove Item
 // To remove an item use removeItem and the name of the key inside
 localStorage.removeItem('name');

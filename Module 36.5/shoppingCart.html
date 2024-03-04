@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div>
+        <div class="flex flex-col">
+            <input id="product" type="text" placeholder="Product">
+            <input id="quantity" type="text"  placeholder="Quantity">
+            <input onclick="storeItem()" type="submit"  value="Buy" class="cursor-pointer">
+        </div>
+        <div class="text-center">
+            <ul id="container" class="list-disc">
+            </ul>
+        </div>
+    </div>
+    <script src="./shoppingCart.js"></script>
+</body>
+</html>
