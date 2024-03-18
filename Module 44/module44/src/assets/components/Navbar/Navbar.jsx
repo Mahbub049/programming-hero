@@ -19,13 +19,13 @@ const Navbar = () => {
 
     return (
             <div>
-                <div onClick={() => setOpen(!open)} className="text-2xl">
+                <div onClick={() => setOpen(!open)} className={'text-2xl lg:hidden'}>
                     {
                         open === false ? <MdMenu /> : <RxCross2 />
 
                     }
                 </div>
-                    <ul className="lg:flex gap-6">
+                    <ul className={`lg:flex lg:static ${open === true ? 'top-8' : '-top-60'} gap-6 duration-1000 absolute top-40`}>
                         {
                             routes.map(route=><Navigation key={routes.id} route={route}></Navigation>)
                         }
