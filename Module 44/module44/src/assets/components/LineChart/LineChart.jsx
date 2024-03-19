@@ -1,7 +1,11 @@
+import axios from 'axios';
 import { LineChart as LChart, Line, XAxis, YAxis } from 'recharts';
 import { BarChart as BChart, Bar} from 'recharts';
+import { ColorRing } from 'react-loader-spinner';
+import { useState } from 'react';
 
 const LineChart = () => {
+    const [spinner, setSpinner] = useState(true);
 
     const studentData = [
         { name: "Alice",  Math: 85, Science: 90, English: 78, History: 82  },
@@ -29,8 +33,32 @@ const LineChart = () => {
         { name: "Jessica", totalMarks: 315 }
       ];
 
+      axios.get('https://openapi.programming-hero.com/api/phones?search=iphone')
+      .then(data=>{
+        const phoneData = data.data.data;
+        const phoneFakeData = phoneData.map(phone=>{
+            const object = {
+                name: phone.phone_name,
+                price: phone.slug.split('-')[1]
+            }
+            return object;
+        })
+        setSpinner(false);
+        console.log(phoneFakeData)
+      });
+
     return (
         <div>
+            {spinner && <ColorRing
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="color-ring-loading"
+            wrapperStyle={{}}
+            wrapperClass="color-ring-wrapper"
+            colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+            />}
+
             <LChart width={1440} height={600} data={studentData}>
                 <XAxis dataKey='name'></XAxis>
                 <YAxis></YAxis>
@@ -44,6 +72,8 @@ const LineChart = () => {
                 <YAxis></YAxis>
                 <Bar dataKey='totalMarks' fill='green'></Bar>
             </BChart>
+
+            
 
         </div>
     );
