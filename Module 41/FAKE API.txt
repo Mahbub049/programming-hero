@@ -1,0 +1,5 @@
+1. Array of objects create and pass
+2. Array of objects using chatgpt
+3. JSON using chatgpt and in public folder
+4. JSON hosted in github
+5. Use online API (swagger, jsplaceholder, json creator, beeceptor)

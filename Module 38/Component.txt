@@ -1,0 +1,50 @@
+Basics
+1. Building blocks of the user interface
+2. Each component exists in the same space but works independently
+3. Splits UI into independent and reusable pieces
+4. All of the components are being merged in a parent component (the final UI)
+5. Accepts input called props (optional) and returns react element
+6. Reusable having their own structure and methods
+
+4 Ways to Define Components
+1. Similar in look, different in data
+2. Container component
+3. No common pattern, but breakdown for working purpose
+4. Stand-alone component
+
+So, What is Component?
+1. Components are the foundation upon which you build user interfaces (UI)
+2. In a React app, every piece of UI is a component.
+3. A React component IS a J'avaScript function that you can sprinkle with markup except:
+  1) Their names always begin with a capital letter.
+  2) They return JSX markup.
+
+How to Build a Component?
+  1. Export the component
+  2. Define the function
+
+  export default function Profile() {}
+  3. Add markup. For example:
+     return (
+     <img src="https://i.imgur.com/fKKek3Am.j jpg* alt="Katherine Johnson*/>
+)
+  4. A Whole Component Without parentheses, any code on the lines after return will be ignored!
+export default function Profile() {
+return (
+<img src="https://i. imgur .com/MK3eW3Am. jpg"alt="Katherine Johnson"
+/>
+)
+}
+
+Advantages
+    1. Code reusability
+    2. Fast development
+    3. Design consistency
+    4. Maintainability (update just one component & get result in all spaces related to this component)
+
+Pitfall
+1. Components can render components, But it is very slow and causes bugs!
+2. Define every component at the top level. When a child component needs
+some data from a parent, pass it by props instead of nesting definitions,
+
+

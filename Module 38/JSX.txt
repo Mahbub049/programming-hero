@@ -1,0 +1,66 @@
+What is JSX?
+   - JSX is a syntax extension for JavaScript
+   - JSX stands for JavaScript XML.
+   - Lets you write HTML-like markup inside a JavaScript file.
+   - Under the hood it is transformed into regular JavaScript using compilers like Babel or Typescript
+
+JSX: Putting markup into JavaScript
+Web developers kept content in HTML, design in CSS, and logic in JavaScript - often in separate files! Content was marked up inside HTML while the page's logic lived separately in JavaScript:
+
+But as the Web became more interactive, JavaScript was in charge of the HTML! This is why in React, rendering logic and markup live together in the same place-components.
+
+** event handler and html code is in the same place of react
+
+Why can't browser read JSX?
+    - Browsers are designed to interpret and render HTML, CSS, and JavaScript.
+    - As JSX is a combination of HTML and JavaScript it is not supported by Browsers
+    - To enable a browser to read JSX, we need to transform JSX file into a Regular JavaScript using compiler like Babel and then pass it to the browser.
+
+What happens behind the scene?
+- JSX Files are sent to the JSX compiler like babel and that file is converted to js file.
+- React creats a virtual DOM and finds out the changes with the browser dom by syncing and updates only the changes. thus it becomes faster.
+
+
+The Rules of JSX
+1. Return a single root element
+   To return multiple elements from a component, wrap them with a single parent tag.
+- by using a div and a fragment <>
+
+2. Close all the tags
+   JSX requires tags to be explicitly closed:
+      - self-closing tags like <img> must become <img/>
+      - wrapping tags like <li> must be written as <li></li>.
+
+3. Must use camelCase
+   HTML attributes must be written in camelCase. For example,
+     - class -> className
+     - onclick -> onClick
+     - tabindex -> tablndex
+
+
+JavaScript in JSX with Curly Braces
+At times, you might want to include some JavaScript logic or use a dynamic content within that markup.ln this situation, you can use curly braces(} in your JSX. Suppose you want to dynamically specify the src or alt text you could replace " with {}:
+
+Where to use curly braces
+You can only use curly braces in two ways inside JSX:
+- As text directly inside a JSX tag: <h1>{name}'s To Do List</h1> works, but <{tag]>John's To Do List</{tag}> will not.
+- As attributes immediately following the = sign: src={avatar} will read the avatar variable, but src="{avatar}" will pass the string "{avatar}".
+
+Using "double curlies"
+You can pass objects in JSX.
+1. Objects also uses curly braces, like
+               {
+		 name: "Peter",
+                 age: 50
+               }
+2. To pass a JS object in JSX, you must wrap the object in another pain of curly braces:
+                             JSX Curly braces
+            	person={
+                          {
+			     name:"Peter",
+                             age: 50	
+		          }
+		       }
+
+How to write inline CSS with curly braces
+when you need an inline style, you pass an object to the style attribute:

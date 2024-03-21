@@ -1,0 +1,96 @@
+We can use react as:
+1. as a web application
+2. mobile application development (react native)
+3. app development/framework (nextjs)
+4. CMS/Static site generation
+
+What is React JS?
+1. ReactJS is a JavaScript library for building user interfaces
+2. ReactJS is declarative, efficient, and flexible
+3. It is fast and component-based
+4. It was initially developed and maintained by Facebook
+
+More about ReactJS
+1. React breaks web elements down into reusable components making it easy to manage complex web interfaces.
+2. React's Virtual DOM is a JavaScript representation of the actual DOM. When updates are made React compares the current DOM to the virtual DOM and only updates the differences between the two.
+
+React vs AngularJS
+
+Library vs framework =>
+     1. React is a Javascript library. Angular is a complete framework built on TypeScript - a superset of Javascript.
+     2. ReactJS is a smaller piece of the overall puzzle, whereas Angular is a collection of all different puzzle pieces.
+
+ Architecture =>
+     1. ReactJS is responsible for the 'view' element of application development in a Model-View-Controller (MVC) framework.
+     2. Angular is a complete MVC framework for front-end development.
+
+Templates =>
+    1. The template used by ReactJS is called 'JSX (JavaScript XML) which combines the JavaScript code and markup in one line of code to create user interfaces efficiently.
+    2. Angular uses templates based on advanced HTML, means you will need to learn the proper
+     HTML syntax in order to be able to write code in Angular.
+
+ Document Object Model =>
+     1. ReactJS maintains a virtual DOM which allows it to be lightning fast.
+     2. Angular has regular DOM which updates the entire html structure everytime a new change is made.
+
+Components =>
+    1. ReactJ5 is a library for building and rendering components.
+    2. Angular is not only about components, it offers more solutions that simply create components such as routing, state management, form validations, and other tools that you need to develop large applications.
+
+ Performance =>
+     1. The virtual DOM feature of ReactJS allows its application to virtually update the changes without rewriting the entire HTML document, this renders updates much quicker
+     2. The regular DOM feature of Angular makes the application slow in performance, especially when compared to the applications built using ReactJS.
+
+Data binding =>
+     1. ReactJ5 supports unidirectional data binding, or what is commonly known as one-way data binding, means that data flows one way while synchronising the Model and View.
+     2. Angular data binding model is bi-directional, meaning that there is a two-way flow of data between the Model and the View.
+
+Scalability =>
+     1. React applications requires you to rely on third-party tools and supporting integrations external to ReactJS
+     2. Angular includes additional tools like routing, state management. HTTPS, etc. which help you build large-scale apps, means it comes packed with all the core features that you may require.
+
+  Learning curve =>
+      1. ReactJS uses JSX (Javascript XML), which is fairly easy to learn if you have prior experience with writing code in Javascript.
+      2. A beginner need to familiarise with the Typescript language that Angular uses. Не will also need to learn about all the rich topics that Angular comprises of,
+
+All comparisons
+----------------
+Size --> Vue too small
+Easy to learn --> angular tough
+coding speed- fast
+startup time - quicker. angular slow
+data binding- react unidirectional. other two two way
+rendering - server side (react)
+code reusability- No only css
+use-production or custom unidirectional
+
+
+When to use ReactJS
+Pros
+# ReactJS has a simple design and uses JSX which makes it easy to learn and use, even for beginners.
+# Owing to its virtual DOM, ReactJS offers fast performance for applications.
+# Being a view library, React does not force on the specific architecture of your application.
+# React allows you to tailor your stack as per your own project requirements by giving you the freedom to
+choose additional libraries.
+# It is a more mature and older tool than Angular. Therefore, it has a larger user base along with wider
+community support.
+#React is backed and supported by Facebook, which makes it a top choice for many leading businesses. See a list of popular companies that use ReactJS below.
+
+
+Cons
+ # React is not a full-scale framework. Using React means you will have to use third-party community-managed modules for routing, state management, form validation, etc. when developing applications
+ # React rolls out frequent updates, making it difficult to maintain the code and keep the documentation up-to-date.
+
+When to use AngularJS
+ -
+ Pros
+ # It offers all the features within its platform. Therefore, you do not need to use third-party community-managed modules.
+ # Angular CLI is a helpful feature to get you started with projects. It automates the development process making every step easier for you.
+ # Bi-directional data-binding used by Angular keeps the data flow simple and easy.
+ # Angular offers extensive documentation and support to help you with all the necessary information.
+ # Angular is supported by Google, which makes it a trustworthy framework with potential for growth and innovation. A number of leading companies rely on Angular for their front-end development need, check out the list below.
+
+Cons
+ # You need to learn TypeScript and have a thorough knowledge of template syntax to be able to use Angular.
+ # Some of the Angular features such as dependency injections and RxJS are sophisticated and require a more professional approach to be implemented. Therefore, it has a steeper learning curve.
+ # Applications built using Angular offer a comparatively slower performance due to the regular DOM used by Angular.
