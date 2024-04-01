@@ -7,11 +7,18 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from './components/Root/Root.jsx';
+import HeroRegister from './components/HeroRegister/HeroRegister.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    children: [
+      {
+        path: '/heroRegister',
+        element: <HeroRegister></HeroRegister>
+      }
+    ]
   },
 ]);
 
