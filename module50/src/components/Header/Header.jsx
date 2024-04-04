@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
     const lists = <>
         <li><a>Item 1</a></li>
-        <li><a>Item 3</a></li>
+        <li><NavLink to={'login'}>Login</NavLink></li>
         <li><NavLink to={'/heroRegister'}>Hero Register</NavLink></li>
     </>;
     return (
