@@ -11,11 +11,13 @@ import About from './Components/About/About';
 import UserDetails from './Components/UserDetails/UserDetails';
 import Posts from './Components/Posts/Posts';
 import PostDetails from './Components/Post Details/PostDetails';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [{
       path: "/users",
       loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
